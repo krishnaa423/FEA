@@ -138,6 +138,6 @@ class CylinderFlowSimulation(Simulation):
                 times.append((step + 1) * config.time_step)
 
         if MPI.COMM_WORLD.rank == 0:
-            self.visualizer.vector_screenshot(velocity, self.paths.images / "cylinder_flow.png", "2D flow past an immersed cylinder")
+            self.visualizer.vector_screenshot(velocity, self.paths.images / "cylinder_flow.png")
             cells = domain.topology.connectivity(domain.topology.dim, 0).array.reshape((-1, 3))
             self.visualizer.scalar_gif(domain.geometry.x, cells, frames, times, self.paths.images / "cylinder_flow.gif", "Speed around an immersed cylinder", "viridis")

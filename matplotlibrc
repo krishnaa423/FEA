@@ -1,6 +1,0 @@
-backend: Agg
-figure.dpi: 130
-savefig.dpi: 160
-animation.writer: pillow
-animation.embed_limit: 100
-

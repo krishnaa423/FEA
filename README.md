@@ -93,6 +93,5 @@ Run every example with `PYTHONPATH=src python src/run_all.py`.
 
 Verified with Python 3.12.13, DOLFINx 0.11.0, PETSc 3.25.3, MPI4Py 4.1.2,
 PyVista 0.48.4, and Matplotlib in the local `dolfinx` Conda environment.
-`matplotlibrc` forces the noninteractive Agg backend so GIF generation works
-in a headless shell.
-
+The project intentionally has no repository-local `matplotlibrc`, so it uses
+the active user configuration, including `/Users/krishnaa/.matplotlib/matplotlibrc`.

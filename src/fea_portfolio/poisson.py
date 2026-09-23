@@ -61,4 +61,4 @@ class CircularCutoutPoissonSimulation(Simulation):
         solution.x.array[:] = problem.solve().x.array
         solution.x.scatter_forward()
         if MPI.COMM_WORLD.rank == 0:
-            self.visualizer.scalar_screenshot(solution, self.paths.images / "poisson_circular_cutout.png", "Poisson potential with embedded circular cutout")
+            self.visualizer.scalar_screenshot(solution, self.paths.images / "poisson_circular_cutout.png")

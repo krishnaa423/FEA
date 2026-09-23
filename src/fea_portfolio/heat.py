@@ -73,6 +73,6 @@ class CenterHeatSimulation(Simulation):
                 times.append((step + 1) * config.time_step)
 
         if MPI.COMM_WORLD.rank == 0:
-            self.visualizer.scalar_screenshot(temperature, self.paths.images / "heat_steady_state.png", "Central heat source: near steady state", "inferno")
+            self.visualizer.scalar_screenshot(temperature, self.paths.images / "heat_steady_state.png", "inferno")
             cells = domain.topology.connectivity(domain.topology.dim, 0).array.reshape((-1, 3))
             self.visualizer.scalar_gif(domain.geometry.x, cells, frames, times, self.paths.images / "heat_evolution.gif", "2D heat equation")
