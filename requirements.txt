@@ -1,0 +1,7 @@
+# The project is designed for the existing Conda environment:
+#   conda activate dolfinx
+dolfinx==0.11.0
+pyvista==0.48.4
+matplotlib
+pillow
+
